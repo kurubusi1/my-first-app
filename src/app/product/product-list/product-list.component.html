@@ -2,7 +2,7 @@
     <br>
     <div class="row">
       <div *ngFor="let product of products" class="col-sm">
-        <a [routerLink]="['/detail']" [title]="product.name + ' details'">
+        <a [routerLink]="['detail']" [title]="product.name + ' details'">
           <div class="card">
               <img src="./assets/img/placeholder.png" alt="" class="card-img-top">
               <div class="card-body">
