@@ -17,7 +17,7 @@ mongoose.connect(config.DB_URI, {
   useCreateIndex: true
 }).then(
   () => {
-    if(process.env.NODE_DEV !== 'production') {
+    if(process.env.NODE_ENV !== 'production') {
       const fakeDb = new FakeDb()
       // fakeDb.initDb()
     }
@@ -26,7 +26,7 @@ mongoose.connect(config.DB_URI, {
 
 app.use('/api/v1/products', productRoutes);
 
-if(process.env.NODE_DEV === 'production') {
+if(process.env.NODE_ENV === 'production') {
   const appPath = path.join( __dirname, "..", "dist","my-first-app")
   app.use(express.static(appPath))
   app.get("*", function(req, res) {
