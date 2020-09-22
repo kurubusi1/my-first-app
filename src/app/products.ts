@@ -9,7 +9,7 @@ export const products = [
     Heading2Text:'すごい高性能',
     Heading3Title:'ハイスペックCPU',
     Heading3Text:'すごい高性能',
-    coverImage: '',
+    coverImage: 'src/assets/img/phone-cover.jpg',
 
   },
   {

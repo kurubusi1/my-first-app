@@ -41,7 +41,7 @@ if(process.env.NODE_ENV === 'production') {
 //     res.json({'success': true} )
 // });
 
-app.listen('3001', function() {
+app.listen(PORT, function() {
     console.log('i am running!')
 });
 
