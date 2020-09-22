@@ -9,7 +9,7 @@ export const products = [
     Heading2Text:'すごい高性能',
     Heading3Title:'ハイスペックCPU',
     Heading3Text:'すごい高性能',
-    coverImage: './assets/img/phone-cover.jpg',
+    coverImage: '',
 
   },
   {
@@ -22,7 +22,7 @@ export const products = [
     Heading2Text:'すごい高性能',
     Heading3Title:'ハイスペックCPU',
     Heading3Text:'すごい高性能',
-    coverImage: './assets/img/phone-cover.jpg',
+    coverImage: 'src/assets/img/phone-cover.jpg',
   },
   {
     name: 'Phone Standard',
@@ -34,6 +34,6 @@ export const products = [
     Heading2Text:'すごい高性能',
     Heading3Title:'ハイスペックCPU',
     Heading3Text:'すごい高性能',
-    coverImage: './assets/img/phone-cover.jpg',
+    coverImage: 'src/assets/img/phone-cover.jpg',
   }
 ];
