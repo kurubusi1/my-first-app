@@ -8,6 +8,7 @@ const FakeDb = require('./fake-db');
 
 const productRoutes = require('./routes/products');
 const userRoutes = require('./routes/users');
+const scheduleRoutes = require('./routes/schedules');
 const path = require('path');
 
 const app = express();
@@ -24,13 +25,16 @@ mongoose.connect(config.DB_URI, {
   () => {
     if(process.env.NODE_ENV !== 'production') {
       const fakeDb = new FakeDb()
-      // fakeDb.initDb()
+      fakeDb.initDb()
+      // fakeDb.seeDb()
     }
+    
   }
 )
 
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/schedules', scheduleRoutes);
 
 if(process.env.NODE_ENV === 'production') {
   const appPath = path.join( __dirname, "..", "dist","my-first-app")
@@ -43,7 +47,7 @@ if(process.env.NODE_ENV === 'production') {
 
 
 
-// app.get('/products', function(req, res) {
+// app.get('/schedules', function(req, res) {
 //     res.json({'success': true} )
 // });
 

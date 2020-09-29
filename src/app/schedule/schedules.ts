@@ -1,0 +1,42 @@
+export const schedules = [
+    {
+      plan: '仕事',
+      gameJoin: '参加',
+      hopeGame: 'Paradins',
+      freeWords:'頑張ります！',
+      userName:'工藤',
+      date:'20200920',
+    },
+    {
+      plan: '仕事',
+      gameJoin: '参加',
+      hopeGame: 'Paradins',
+      freeWords:'頑張ります！',
+      userName:'岩渕',
+      date:'20200920',
+    },
+    {
+      plan: '仕事',
+      gameJoin: '参加',
+      hopeGame: 'Paradins',
+      freeWords:'先日仕事やめましたので暇してます。どなたか相手してください。',
+      userName:'小川尿',
+      date:'20200920',
+    },
+    {
+      plan: '仕事',
+      gameJoin: '参加',
+      hopeGame: 'Paradins',
+      freeWords:'頑張ります！',
+      userName:'泉谷',
+      date:'20200920',
+    },
+    {
+      plan: '仕事',
+      gameJoin: '参加',
+      hopeGame: 'Paradins',
+      freeWords:'頑張ります！',
+      userName:'大森かずき',
+      date:'20200920',
+    },
+  ];
