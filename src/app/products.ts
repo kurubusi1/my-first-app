@@ -1,5 +1,18 @@
 export const products = [
   {
+    name: 'スケジュール表',
+    price: 799,
+    description: 'A large phone with one of the best screens',
+    Heading1Title:'ハイスペックCPU',
+    Heading1Text:'すごい高性能',
+    Heading2Title:'ハイスペックCPU',
+    Heading2Text:'すごい高性能',
+    Heading3Title:'ハイスペックCPU',
+    Heading3Text:'すごい高性能',
+    coverImage: 'src/assets/img/phone-cover.jpg',
+
+  },
+  {
     name: 'Phone XL',
     price: 799,
     description: 'A large phone with one of the best screens',
@@ -36,4 +49,5 @@ export const products = [
     Heading3Text:'すごい高性能',
     coverImage: 'src/assets/img/phone-cover.jpg',
   }
+
 ];
