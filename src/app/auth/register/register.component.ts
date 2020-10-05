@@ -33,4 +33,6 @@ export class RegisterComponent implements OnInit {
         )
         console.log(registerForm.value)
     }
+
+
 }

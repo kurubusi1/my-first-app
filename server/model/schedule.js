@@ -20,7 +20,6 @@ const ScheduleSchema = new Schema({
     },
   freeWords: {
       type: String,
-      require: true, 
       max:[100,'最大100文字までです!']
     },
   userName: {

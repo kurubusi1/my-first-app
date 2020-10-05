@@ -131,21 +131,117 @@
               </button>
           </div>
           <div class="modal-body">
-
-
-              <!-- <form>
-              <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                  <label for="message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
-              </div>
-              </form> -->
-
-
+            <form class="input-form" #inputForm="ngForm" (ngSubmit)="input(inputForm)">
+            <!-- <form> -->
               <table id="planTable" class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">#</th>
+                      <td>ユーザー名</td>
+                      <td>ユーザー名</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>予定</td>
+                      <td>
+
+                        
+                        <!-- <input 
+                          id="menu schedule"
+                          ngModel
+                          name="plan"
+                          type="text" 
+                          class="form-control" 
+                          placeholder="選択してください" 
+                          required
+                        /> -->
+
+
+                        <select 
+                          id="menu schedule"
+                          ngModel
+                          name="plan"
+                          type="text" 
+                          class="form-control" 
+                          required
+                        >
+                          <!-- <option value="">選択してください</option> -->
+                          <option value="" style="display: none;">選択してください</option>
+                          <option value="仕事">仕事</option>
+                          <option value="休暇">休暇</option>
+                        </select>
+
+                      </td>
+         
+         
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>
+                        ゲーム参加可否
+                      </td>
+                      <td>
+                        <select 
+                          id="menu schedule"
+                          ngModel
+                          name="gameJoin"
+                          type="text" 
+                          class="form-control" 
+                          required
+                        >
+                          <!-- <option value="">選択してください</option> -->
+                          <option value="" style="display: none;">選択してください</option>
+                          <option value="参加">参加</option>
+                          <option value="不参加">不参加</option>
+                        </select>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>希望ゲーム</td>
+                      <td>
+                        <select 
+                          id="menu schedule"
+                          ngModel
+                          name="hopeGame"
+                          type="text" 
+                          class="form-control" 
+                          required
+                        >
+                          <!-- <option value="">選択してください</option> -->
+                          <option value="" style="display: none;">選択してください</option>
+                          <option value="ROCKET LEAGE">ROCKET LEAGE</option>
+                          <option value="Paradins">Paradins</option>
+                          <option value="CSGO">CSGO</option>
+                          <option value="スマブラ">スマブラ</option>
+                          <option value="早押しクイズバトル">早押しクイズバトル</option>
+                          <option value="大富豪">大富豪</option>
+                          
+                        </select>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>ひと言</td>
+                      <td>
+                        <textarea ngModel name="freeWords" id="textarea" cols="20" rows="2" class="form-control" required placeholder="自由に書いてみよう!" ></textarea>
+                        <!-- <input 
+                          ngModel
+                          name="freeWords"
+                          type="text" 
+                          class="form-control" 
+                          placeholder="自由に書いてみよう!" 
+                          required
+                        /> -->
+                      </td>
+                    </tr>
+                  </tbody>
+
+                
+
+
                   <!-- <thead>
                    <tr>
                      <th scope="col">#</th>
@@ -154,62 +250,21 @@
                      <th scope="col">Handle</th>
                    </tr>
                  </thead> -->
-                 <tbody>
-                   <tr>
-                     <th scope="row">1</th>
-                     <td>予定</td>
-                     <td>
-                       <select id="menu">
-                         <option value="">選択してください</option>
-                         <option value="仕事">仕事</option>
-                         <option value="休暇">休暇</option>
-                       </select>
-                     </td>
-        
-        
-                   </tr>
-                   <tr>
-                     <th scope="row">2</th>
-                     <td>
-                       ゲーム参加可否
-                     </td>
-                     <td>
-                       <select id="menu">
-                         <option value="">選択してください</option>
-                         <option value="参加">参加</option>
-                         <option value="不参加">不参加</option>
-                       </select>
-                     </td>
-                   </tr>
-                   <tr>
-                     <th scope="row">3</th>
-                     <td>希望ゲーム</td>
-                     <td>
-                       <select id="menu">
-                         <option value="">選択してください</option>
-                         <option value="Paradins">Paradins</option>
-                         <option value="スマブラ">スマブラ</option>
-                         <option value="CSGO">CSGO</option>
-                         <option value="ボードゲーム">ボードゲーム系</option>
-                       </select>
-                     </td>
-                   </tr>
-                   <tr>
-                     <th scope="row">4</th>
-                     <td>ひと言</td>
-                     <td>
-                       <textarea name="textarea" id="textarea" cols="20" rows="2"></textarea>
-        
-                     </td>
-                   </tr>
-                 </tbody>
+                 
               </table>
 
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-              <button type="button" class="btn btn-primary">保存する</button>
-          </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                  <button type="button" class="btn btn-primary" type="submit">保存する</button>
+              </div>
+
+             </form>
+
+
+
+
+
+
       </div>
   </div>
 </div>

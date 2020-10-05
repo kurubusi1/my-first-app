@@ -26,6 +26,12 @@ export class ScheduleService {
         return this.http.get('api/v1/schedules')
     }
 
+    getUserName():Observable<any> {
+        return this.http.get('/api/v1/schedules')
+    }
+
+
+
     // private decodedToken
 
     // constructor(
@@ -46,9 +52,13 @@ export class ScheduleService {
     //     return moment().isBefore(moment.unix(this.decodedToken.exp))
     // }
 
-    // register(userData: any):Observable<any> {
-    // return this.http.post('/api/v1/users/register' , userData);
-    // }
+    input(scheduleData: any):Observable<any> {
+    return this.http.post('api/v1/schedules/input' , scheduleData);
+    }
+
+
+
+
 
     // login(userData: any):Observable<any> {
     // return this.http.post('/api/v1/users/login' , userData).pipe(map(

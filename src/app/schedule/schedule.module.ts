@@ -9,6 +9,7 @@ import { ScheduleInputComponent } from './schedule-input/schedule-input.componen
 import { ScheduleComponent } from './schedule.component';
 // import { AuthGuard } from '../auth/shared/auth.guard';
 import { ScheduleService } from './shared/schedule.service';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
     { 
@@ -34,6 +35,7 @@ imports: [
     
     RouterModule.forChild(routes),
     CommonModule,
+    FormsModule,
     
 ],
 providers: [
