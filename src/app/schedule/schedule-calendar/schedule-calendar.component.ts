@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+// import { AuthService } from './../../auth/shared/auth.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+// import { ENETRESET } from 'constants';
+import { ScheduleInputComponent } from '../schedule-input/schedule-input.component';
 
 // import { schedules } from '../schedules';
 import { ScheduleService } from '../shared/schedule.service';
@@ -25,8 +30,19 @@ export class ScheduleCalendarComponent implements OnInit {
 
   schedules: any 
 
-  constructor(private scheduleService: ScheduleService ) { 
-  }
+  errors: any = []
+
+  public inputPlans: string[] =[
+    '仕事', '休暇'
+  ];
+
+  constructor(
+    private scheduleService: ScheduleService,
+    private router: Router,
+    // private authService: AuthService,
+
+  ) { 
+}
   
   ngOnInit(): void {
     getNow();
@@ -40,11 +56,40 @@ export class ScheduleCalendarComponent implements OnInit {
       (err) => { console.log('次のエラーが発生しました:' + err) }
     )
 
-
-
-
-
   }
 
 
+  input(inputForm) {
+    this.scheduleService.input(inputForm.value).subscribe(
+      (result) => {
+        console.log('Success!')
+        this.router.navigate(['/schedules'])
+      },
+      (err: HttpErrorResponse) => {
+        console.error(err)
+        this.errors = err.error.errors
+      }
+    )
+    console.log(inputForm.value)
+  }
 }
+
+
+
+
+
+
+// input(inputForm) {
+//   this.scheduleService.input(inputForm.value).subscribe(
+//       (result) => {
+//           console.log('Success!')
+//           this.router.navigate([''])
+//       },
+//       (err: HttpErrorResponse) => {
+//           console.error(err)
+//           this.errors = err.error.errors
+
+//       }
+//   )
+//   console.log(inputForm.value)
+// }
