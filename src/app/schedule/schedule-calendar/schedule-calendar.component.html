@@ -1,54 +1,6 @@
-<!-- 
-
-
-
-<html ng-app>
-    <head>
-        <script src="js/date.js"></script>
-        
-    </head>
-    <body>
-      <span id="view_time"></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </body>
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/phone-cover.jpg');">
   <!-- <div class="filter"></div> -->
 </div>
-
-
-
 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
@@ -60,7 +12,6 @@
     </li>
     <span id="view_time"></span>
     
-
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -92,27 +43,6 @@
         <td>{{schedule.freeWords}}</td>
       </tr>
   </tbody>
-
-  <!-- <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody> -->
 </table>
 
 <!-- Button trigger modal -->
@@ -138,25 +68,29 @@
                     <tr>
                       <th scope="row">#</th>
                       <td>ユーザー名</td>
-                      <td>ユーザー名</td>
+                      <td>
+                        <select 
+                          id="menu schedule"
+                          ngModel
+                          name="username"
+                          type="text" 
+                          class="form-control" 
+                          required
+                        >
+                          <!-- <option value="">選択してください</option> -->
+                          <option value="" style="display: none;">選択してください</option>
+                          <option value="ぺろんちょ">ぺろんちょ</option>
+                          <option value="ブチトリス">ブチトリス</option>
+                          <option value="小川尿">小川尿</option>
+                          <option value="泉谷">泉谷</option>
+                          <option value="大森かずき">大森かずき</option>
+                        </select>
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">1</th>
                       <td>予定</td>
                       <td>
-
-                        
-                        <!-- <input 
-                          id="menu schedule"
-                          ngModel
-                          name="plan"
-                          type="text" 
-                          class="form-control" 
-                          placeholder="選択してください" 
-                          required
-                        /> -->
-
-
                         <select 
                           id="menu schedule"
                           ngModel
@@ -172,8 +106,6 @@
                         </select>
 
                       </td>
-         
-         
                     </tr>
                     <tr>
                       <th scope="row">2</th>
@@ -227,30 +159,9 @@
                       <td>ひと言</td>
                       <td>
                         <textarea ngModel name="freeWords" id="textarea" cols="20" rows="2" class="form-control" required placeholder="自由に書いてみよう!" ></textarea>
-                        <!-- <input 
-                          ngModel
-                          name="freeWords"
-                          type="text" 
-                          class="form-control" 
-                          placeholder="自由に書いてみよう!" 
-                          required
-                        /> -->
                       </td>
                     </tr>
                   </tbody>
-
-                
-
-
-                  <!-- <thead>
-                   <tr>
-                     <th scope="col">#</th>
-                     <th scope="col">First</th>
-                     <th scope="col">Last</th>
-                     <th scope="col">Handle</th>
-                   </tr>
-                 </thead> -->
-                 
               </table>
 
               <div class="modal-footer">
@@ -259,11 +170,6 @@
               </div>
 
              </form>
-
-
-
-
-
 
       </div>
   </div>
